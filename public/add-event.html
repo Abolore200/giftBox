@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event - giftBox</title>
+    <link rel="stylesheet" href="./assets/css/add.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/images/mistery-box.svg">
+</head>
+<body>
+    <div class="body-home">
+        <aside class="side-menu">
+            <div class="fixed-side-bar">
+                <div class="box-logo">
+                    <a href="add-event.html">
+                        <img src="./assets/images/mistery-box.svg" alt="box">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-calendar"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <main class="main-menu">
+            <section class="add-event">
+                <div class="add-event-header">
+                    <h2>Create A New Event</h2>
+                </div>
+                <div class="input-event">
+                    <form action="#">
+                        <div class="form-flex">
+                            <div class="fill-input">
+                                <div class="admin-name input">
+                                    <label>Admin name</label><br>
+                                    <input type="text" id="admin-name" required autocomplete="off">
+                                </div>
+                                <div class="giftBox-slots input">
+                                    <label>GiftBox Slots</label><br>
+                                    <input type="text" id="giftBox-slots" required autocomplete="off">
+                                </div>
+                                <div class="giftBox-rewards input">
+                                    <label>GiftBox Rewards</label><br>
+                                    <input type="text" id="giftBox-rewards" required autocomplete="off">
+                                </div>
+                                <div class="required-tickets input">
+                                    <label>Required Tickets</label><br>
+                                    <input type="text" id="required-tickets" required autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="upload-img">
+                                <div class="display-image">
+                                    <img src="" alt="uploaded-image">
+                                </div>
+                                <div class="upload-btn">
+                                    <label for="uploadbtn">
+                                        <span>Upload Image</span>
+                                        <input type="file" accept="image/jpeg,image/png,image/jpeg" name="uploadbtn" id="uploadbtn">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-rule">
+                            <label>GiftBox event rule and description</label><br>
+                            <textarea id="giftBox-rules"></textarea>
+                        </div>
+                        <div class="submit-btn">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

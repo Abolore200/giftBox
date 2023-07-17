@@ -1,0 +1,30 @@
+*{padding:0;margin:0;outline:none;box-sizing:border-box;}
+body{scroll-behavior:smooth;position:relative;}
+/* a{text-decoration:none;color:#fff;} */
+body{width:100%;font-family:'Poppins', Verdana, Geneva, Tahoma, sans-serif;}
+html{scroll-behavior:smooth;width:100%;}
+html{
+    --poppins:Poppins;
+    --black-ash-text:#263238;
+    --helvetica:Helvetica;
+    --wgt700:700;
+    --wgt400:400;
+    --white-ash:#F1F1F1;
+    --gray:#849DA9;
+    --login-color:#8338EC;
+    --width100:100%;
+    --white-text:#fff;
+}
+main{height:100vh;width:var(--width100);}
+.login-body{display:flex;justify-content:center;align-items:center;flex-direction:column;margin:50px 0 80px;height:inherit;}
+.box-logo .box{width:90px;height:90px;}
+.box-logo .box img{width:var(--width100);height:var(--width100);}
+.welcome-header h4{color:var(--black-ash-text);font-size:25px;font-family:var(--poppins);}
+.welcome-header{margin-top:20px;}
+.form-input{width:300px;margin-top:20px;}
+.form-input form .input-email,.form-input form .input-password{width:var(--width100);}
+.form-input form .input-password{margin-top:10px;}
+.form-input form .input-email label,.form-input form .input-password label{font-weight:var(--wgt400);font-size:15px;color:var(--black-ash-text);}
+.form-input form .input-email input,.form-input form .input-password input{width:var(--width100);height:40px;background-color:var(--white-ash);border:1px solid var(--gray);margin-top:5px;padding:0 5px;font-family:var(--poppins);}
+.form-input form .login-btn{width:var(--width100);margin-top:30px;}
+.form-input form .login-btn button{background-color:var(--login-color);width:var(--width100);height:45px;border:var(--login-color);font-family:var(--poppins);font-weight:600;font-size:17px;color:var(--white-text);}
