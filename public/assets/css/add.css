@@ -19,19 +19,18 @@ html{
 }
 /* main{width:var(--width100);} */
 .body-home{display:flex;width:var(--width100);position:relative;}
-.body-home aside{width:7%;background-color:var(--white-text);display:flex;flex-direction:column;}
+.body-home aside{width:5%;background-color:var(--white-text);display:flex;flex-direction:column;}
 .body-home aside .fixed-side-bar{position:fixed;bottom:0;top:0;width:inherit;padding-top:30px;}
-.body-home main{width:93%;background-color:var(--home-color);}
-.side-menu .box-logo{width:70px;height:70px;margin:0 auto;margin-bottom:40px;}
+.body-home main{width:95%;background-color:var(--home-color);}
+.side-menu .box-logo{width:50px;height:50px;margin:0 auto;margin-bottom:40px;}
 .side-menu .box-logo a img{width:var(--width100);height:var(--width100);}
 .side-menu .menu ul{display:flex;justify-content:center;flex-direction:column;align-items:center;}
 .side-menu .menu ul li{list-style:none;margin:15px 0;}
-.side-menu .menu ul li i{font-size:30px;color:#A3A3A3;}
-.side-menu .menu ul li:first-child i{color:var(--blue-icon-color);}
-.side-menu .menu ul li:last-child i{transform:rotate(180deg);}
-.side-menu .menu ul li i:hover{color:var(--blue-icon-color);transition:all .5s;}
-.main-menu{padding:100px 0;}
-.main-menu .add-event{width:100%;display:flex;flex-direction:column;align-items:center;}
+.side-menu .menu ul li img{width:20px;height:20px;color:#A3A3A3;}
+.side-menu .menu ul li:first-child img{color:var(--blue-icon-color);}
+/* .side-menu .menu ul li img:hover{color:var(--blue-icon-color);transition:all .5s;} */
+.main-menu{padding:50px 0 100px;position:relative;}
+.main-menu .add-event{width:100%;display:flex;flex-direction:column;padding-left:100px;}
 .main-menu .add-event .add-event-header h2{color:var(--black-ash-text);}
 .main-menu .add-event .input-event{width:600px;padding:30px 20px;background-color:var(--white-text);box-shadow:0px 0px 20px 6px #D3D3D340;margin-top:30px;}
 .input-event form .form-flex{display:flex;justify-content:space-between;}
@@ -45,8 +44,20 @@ html{
 .upload-img .display-image{width:220px;height:220px;margin-left:auto;background-color:var(--gray);border-radius:10px;}
 .upload-img .display-image img{width:100%;height:100%;border-radius:10px;}
 .upload-img .upload-btn{position:relative;width:220px;margin-left:auto;margin-top:10px;}
-.upload-img .upload-btn label{width:var(--width100);background-color:#FB5607;position:absolute;text-align:center;padding:10px 7px;color:var(--white-text);font-weight:var(--wgt700);font-size:15px;border-radius:4px;}
+.upload-img .upload-btn label{width:var(--width100);background-color:var(--blue-icon-color);position:absolute;text-align:center;padding:10px 7px;color:var(--white-text);font-weight:var(--wgt700);font-size:15px;border-radius:4px;}
 .upload-img .upload-btn label input{opacity:0;display:none;}
 .input-event form .event-rule textarea{resize:none;height:150px;padding:5px;}
 .input-event form .submit-btn{text-align:center;margin-top:15px;}
-.input-event form .submit-btn button{font-weight:var(--wgt700);font-family:var(--poppins);font-size:15px;color:var(--white-text);background-color:var(--submit-color);width:220px;padding:10px 7px;border-radius:4px;border:1px solid var(--submit-color);}
+.input-event form .submit-btn button{font-weight:var(--wgt700);font-family:var(--poppins);font-size:15px;color:var(--white-text);background-color:var(--blue-icon-color);width:220px;padding:10px 7px;border-radius:4px;border:1px solid var(--blue-icon-color-color);}
+.error{text-align:center;margin-bottom:20px;}
+.error p{color:red;}
+.main-menu .success-header .success::after{content:"";width:0%;height:2px;position:relative;display:block;background-color:rgba(40, 167, 69,20%);margin-top:10px;}
+.main-menu .success-header .success::after{animation-name:success;animation-duration:1s;animation-fill-mode:forwards;}
+.main-menu .success-header{width:var(--width100);text-align:center;position:fixed;z-index:999;top:0;transition:all .5s;}
+.main-menu .success-header .success{background-color:rgba(40, 167, 69,100%);text-align:center;width:var(--width100);padding:10px 0 0px;transition:all .5s;position:relative;}
+.main-menu .success-header .success p{font-family:var(--poppins);font-weight:500;font-size:16px;color:var(--white-text);}
+/* .main-menu .success-header .success.addTransition{animation-name:success;animation-duration:1s;animation-fill-mode:forwards;} */
+
+@keyframes success{
+    0%{width:0%;}100%{width:100%;}
+}

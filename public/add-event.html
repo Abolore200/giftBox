@@ -18,6 +18,7 @@
     <link rel="icon" href="./assets/images/mistery-box.svg">
 </head>
 <body>
+    <div class="success-header"></div>
     <div class="body-home">
         <aside class="side-menu">
             <div class="fixed-side-bar">
@@ -30,17 +31,17 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <i class="fa-solid fa-circle-plus"></i>
+                                <img src="./assets/images/addbtn.svg" alt="add">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-solid fa-calendar"></i>
+                                <img src="./assets/images/Vector.svg" alt="view-event">
                             </a>
                         </li>
                         <li>
                             <a href="login.html">
-                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <img src="./assets/images/Group.svg" alt="log-out">
                             </a>
                         </li>
                     </ul>
@@ -48,29 +49,30 @@
             </div>
         </aside>
         <main class="main-menu">
+            <div class="success-header"></div>
             <section class="add-event">
                 <div class="add-event-header">
                     <h2>Create A New Event</h2>
                 </div>
                 <div class="input-event">
-                    <form action="#">
+                    <form action="#" id="submitForm">
                         <div class="form-flex">
                             <div class="fill-input">
                                 <div class="admin-name input">
                                     <label>Admin name</label><br>
-                                    <input type="text" id="admin-name" required autocomplete="off">
+                                    <input type="text" id="admin-name" autocomplete="off">
                                 </div>
                                 <div class="giftBox-slots input">
                                     <label>GiftBox Slots</label><br>
-                                    <input type="text" id="giftBox-slots" required autocomplete="off">
+                                    <input type="text" id="giftBox-slots" autocomplete="off">
                                 </div>
                                 <div class="giftBox-rewards input">
                                     <label>GiftBox Rewards</label><br>
-                                    <input type="text" id="giftBox-rewards" required autocomplete="off">
+                                    <input type="text" id="giftBox-rewards" autocomplete="off">
                                 </div>
                                 <div class="required-tickets input">
                                     <label>Required Tickets</label><br>
-                                    <input type="text" id="required-tickets" required autocomplete="off">
+                                    <input type="text" id="required-tickets" autocomplete="off">
                                 </div>
                             </div>
                             <div class="upload-img">
@@ -97,5 +99,8 @@
             </section>
         </main>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="./assets/js/addEvent/index.js"></script>
 </body>
 </html>
