@@ -23,7 +23,7 @@ main{width:var(--width100);background-color:#263238}
 .box-logo{border-bottom-left-radius:1000px;}
 .box-logo .box{width:var(--width100);position:relative;height:var(--width100);display:flex;justify-content:center;align-items:center;}
 .box-logo .box img{width:80%;height:80%;position:absolute;transform:translate(-50%,-50%);top:50%;left:25%;}
-.welcome-header h4{color:var(--white-text);font-size:25px;font-family:'Pacifico';text-transform:uppercase;}
+.welcome-header h4{color:var(--white-text);font-size:30px;font-family:var(--poppins);text-transform:uppercase;}
 .welcome-header{margin-top:20px;}
 .form-input{width:300px;}
 .form-flex{width:60%;margin-left:200px;display:flex;align-items:center;}

@@ -32,16 +32,15 @@ submitForm.addEventListener('submit', e => {
 
         //show error message
         addevent.displayError()
-    }else{
+    } else{
         addevent.saveEvent(adminName,giftBoxSlots,giftBoxRewards,requiredTickets,giftBoxRules,img.src)
         addevent.displaySuccess()
 
-        // setTimeout(() => {
-        //     window.location.reload()
-        // },5000)
+        setTimeout(() => {
+            window.location.reload()
+        },3000)
     }
 })
-
 
 
 class addEvent{
@@ -78,28 +77,27 @@ class addEvent{
                 alert('upload successful!')
                 addevent.displayUploadedImage(url)
                 //
-                console.log(url);
                 })
             })
         })
     }
-    displayUploadedImage(url){
-        img.src = url
+    async displayUploadedImage(url){
+        img.src = await url
     }
-    async saveEvent(adminName,giftBoxSlots,giftBoxRewards,requiredTickets,giftBoxRules,img){
+    saveEvent(adminName,giftBoxSlots,giftBoxRewards,requiredTickets,giftBoxRules,imgSRC){
         const event = {
             admin_name: adminName.value,
             giftBox_slots: giftBoxSlots.value,
             giftBox_rewards: giftBoxRewards.value,
             required_tickets: requiredTickets.value,
             giftBox_rules: giftBoxRules.value,
-            uploaded_image: await img
+            uploaded_image: imgSRC
         }
 
-        console.log(event);
+        
+        this.saveEventToLocalStorage(event)
     }
     async displaySuccess(){
-        await this.saveEvent(adminName,giftBoxSlots,giftBoxRewards,requiredTickets,giftBoxRules,img)
 
         //create success logo
         const success = document.createElement('div')
@@ -107,19 +105,33 @@ class addEvent{
         success.innerHTML = `<p> New Event Added </p>`
 
         //insert margin when success message displays
-        const successHeader = await document.querySelector('.main-menu .success-header')
+        const successHeader = document.querySelector('.main-menu .success-header')
         
         //
         const mainMenu = document.querySelector('.main-menu .add-event')
         mainMenu.style.marginTop = '100px'
 
-        successHeader.appendChild(success)
+        await successHeader.appendChild(success)
 
         setTimeout(() => {
             mainMenu.style.marginTop = '50px'
 
             success.remove()
-        },5000)
+        },3000)
+    }
+    saveEventToLocalStorage(event){
+        let evt = this.getEventLocalStorage()
+        evt.push(event)
+        localStorage.setItem('events', JSON.stringify(evt))
+    }
+    getEventLocalStorage(){
+        let evt;
+        let evtLocalStorage = localStorage.getItem('events')
+        if(evtLocalStorage === null){
+            evt = []
+        } else {
+            evt = JSON.parse(evtLocalStorage)
+        } return evt
     }
 }
 
