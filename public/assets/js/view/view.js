@@ -109,6 +109,28 @@ class viewEvent{
 
         localStorage.setItem('events', JSON.stringify(events))
     }
+    async displaySuccess(ticketID){
+
+        //create success logo
+        const success = document.createElement('div')
+        success.classList.add('success')
+        success.innerHTML = `<p> Ticket ID ${ticketID} Deleted </p>`
+
+        //insert margin when success message displays
+        const successHeader = document.querySelector('.main-menu .success-header')
+        
+        //
+        const mainMenu = document.querySelector('.main-menu .add-event')
+        mainMenu.style.marginTop = '100px'
+
+        await successHeader.appendChild(success)
+
+        setTimeout(() => {
+            mainMenu.style.marginTop = '50px'
+
+            success.remove()
+        },3000)
+    }
 }
 
 //viewevent class
@@ -190,9 +212,17 @@ event_home.addEventListener('click', e => {
     if(e.target.classList.contains('delete-btn')){
         const parentElement = e.target.parentElement.parentElement.parentElement.parentElement.parentElement
 
-        parentElement.remove()
-
+        //
         const getDataID = parentElement.querySelector('.delete-btn').getAttribute('data-id')
+
+        const response = confirm('Are you sure you want to delete?')
+
+        if(response){
+            setTimeout(() => {
+                parentElement.remove()
+                viewevent.displaySuccess(getDataID)
+            },3000)
+        }
 
         viewevent.removeEvent(getDataID);
     }

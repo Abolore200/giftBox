@@ -1,13 +1,13 @@
 *{padding:0;margin:0;outline:none;box-sizing:border-box;}
-body{scroll-behavior:smooth;position:relative;}
+body{scroll-behavior:smooth;position:relative;background-color:var(--home-color);}
 body{width:100%;font-family:'Poppins', Verdana, Geneva, Tahoma, sans-serif;}
 html{scroll-behavior:smooth;width:100%;}
 html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:700;--wgt400:400;--white-ash:#F1F1F1;--gray:#849DA9;--submit-color:#8338EC;--width100:100%;--white-text:#fff;--home-color:#FAFAFA;--blue-icon-color:#3A86FF;}
-/* main{width:var(--width100);} */
 .body-home{display:flex;width:var(--width100);position:relative;}
-.body-home aside{width:5%;background-color:var(--white-text);display:flex;flex-direction:column;}
-.body-home aside .fixed-side-bar{position:fixed;bottom:0;top:0;width:inherit;padding-top:30px;}
-.body-home main{width:95%;background-color:var(--home-color);}
+.body-home aside{width:5%;background-color:var(--white-text);display:flex;flex-direction:column;position:fixed;top:0;bottom:0;z-index:1;}
+/* .body-home aside .fixed-side-bar{position:fixed;bottom:0;top:0;width:inherit;padding-top:30px;} */
+.body-home aside .fixed-side-bar{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:30px;width:100%;}
+.body-home main{width:95%;background-color:var(--home-color);margin-left:5%;}
 .side-menu .box-logo{width:50px;height:50px;margin:0 auto;margin-bottom:40px;}
 .side-menu .box-logo a img{width:var(--width100);height:var(--width100);}
 .side-menu .menu ul{display:flex;justify-content:center;flex-direction:column;align-items:center;}
@@ -32,6 +32,7 @@ html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:7
 .upload-img .upload-btn label{width:var(--width100);background-color:var(--blue-icon-color);position:absolute;text-align:center;padding:10px 7px;color:var(--white-text);font-weight:var(--wgt700);font-size:15px;border-radius:4px;}
 .upload-img .upload-btn label input{opacity:0;display:none;}
 .input-event form .event-rule textarea{resize:none;height:150px;padding:5px;}
+.input-event form .event-rule p{font-size:12px;margin-top:-5px;}
 .input-event form .submit-btn{text-align:center;margin-top:15px;}
 .input-event form .submit-btn button{font-weight:var(--wgt700);font-family:var(--poppins);font-size:15px;color:var(--white-text);background-color:var(--blue-icon-color);width:220px;padding:10px 7px;border-radius:4px;border:1px solid var(--blue-icon-color-color);}
 .error{text-align:center;margin-bottom:20px;}
@@ -46,4 +47,15 @@ html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:7
 
 @keyframes success{
     0%{width:0%;}100%{width:100%;}
+}
+@media screen and (min-width:700px) and (max-width:1000px){
+    .main-menu .add-event{padding-left:50px;}
+    .body-home aside{width:10%;left:0;}
+    .side-menu .menu ul li object{width:30px;height:30px;}
+    .body-home main{width:90%;margin-left:10%;}
+    .side-menu .box-logo{width:40px;height:40px;}
+}
+
+@media screen and (min-width:700px) and (max-width:799px){
+    .main-menu .add-event .input-event{width:90%;}
 }
