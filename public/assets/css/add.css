@@ -24,7 +24,7 @@ html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:7
 .input-event form .form-flex .fill-input{margin-right:10px;}
 .input-event form .form-flex .upload-img{margin-left:10px;padding-top:10px;}
 .input-event form .form-flex .fill-input .input label,.input-event form .event-rule label{font-size:15px;color:var(--black-ash-text);font-weight:var(--wgt400);}
-.input-event form .form-flex .fill-input .input input,.input-event form .event-rule textarea{width:100%;height:35px;padding:0 5px;border:1px solid var(--gray);background-color:var(--white-ash);margin-top:5px;font-family:var(--poppins);}
+.input-event form .form-flex .fill-input .input input,.input-event form .event-rule textarea{width:100%;height:35px;padding:0 5px;border:1px solid var(--gray);background-color:var(--white-ash);margin-top:5px;font-family:var(--poppins);font-size:16px;color:var(--black-ash-text);}
 .input-event form .form-flex .fill-input .input{margin-bottom:8px;}
 .upload-img .display-image{width:220px;height:220px;margin-left:auto;background-color:var(--gray);border-radius:10px;}
 .upload-img .display-image img{width:100%;height:100%;border-radius:10px;}

@@ -7,13 +7,9 @@ const events = JSON.parse(eventLocalStorage)
 //
 const addEvtHeader = document.querySelector('.add-event-header')
 
-if(localStorage.length == 0 || JSON.parse(localStorage.getItem('events')).length == []){
-    const notFound = document.createElement('div')
-    notFound.classList.add('notFound')
-    notFound.innerHTML = `<p> No available events, add events to view them </p>`
+//
+const eventHeader = document.querySelector('.main-menu .add-event .view-events .events-header')
 
-    addEvtHeader.appendChild(notFound)
-}
 
 //append the viewed event here
 const displayEvt = document.querySelector('.view-clicked-event .viewed-event')
@@ -23,8 +19,6 @@ const viewEvt = document.querySelector('.view-clicked-event')
 
 //
 const event_home = document.querySelector('.main-menu .add-event .view-events .events-header')
-
-
 
 //class viewEvent, perform all functions called into it
 class viewEvent{
@@ -129,63 +123,66 @@ class viewEvent{
             success.remove()
         },3000)
     }
+    showEvent(){
+
+        //div created for new events
+        let html = ""
+
+        for(let i = 0; i < events.length; i++){
+
+
+            //random cash number
+            let randomArr = (Math.floor(Math.random() * 50000) + 1);
+        
+            //call fucntion to reduce length of (events[i]?.giftBox_rules) if any of the text is > 100
+            const rules = viewevent.minLength(events[i]?.giftBox_rules)
+        
+            html += `
+                <div class="events">
+                    <div class="event-flex">
+                    <div class="events-home">
+                        <div class="events-images">
+                            <img src="${events[i]?.uploaded_image}" alt="image"/>
+                        </div>
+                        <div class="events-descriptions">
+                            <div class="event-tickets evt">
+                                <p> ${events[i]?.required_tickets} </p>
+                            </div>
+                            <div class="event-rewards evt">
+                                <p> <span> Gift Reward:- </span> <span> ${events[i]?.giftBox_rewards} </span> </p>
+                            </div>
+                            <div class="event-slots evt">
+                                <p> <span> Slots:- </span> <span> ${events[i]?.giftBox_slots} </span> </p>
+                            </div>
+                            <div class="event-description-note evt">
+                                <p> <span> Description:- </span> ${rules}</p>
+                                <p style="display:none"> <span> Description:- </span> <span> ${events[i]?.giftBox_rules} </span> </p>
+                            </div>
+                        </div>
+                        <div class="events-cash">
+                            <p> &#128176; &nbsp; ${randomArr} </p>
+                        </div>
+                        <div class="events-confirmation">
+                            <div class="event-btn">
+                                <button type="button" class="delete-btn" data-id="${events[i]?.required_tickets}"> Delete Event </button>
+                                <button type="button" class="view-btn"> View Event </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        //insert every new event into eventHeader
+        eventHeader.innerHTML = html
+    }
 }
 
 //viewevent class
 const viewevent = new viewEvent()
 
-const eventHeader = document.querySelector('.main-menu .add-event .view-events .events-header')
-
-//div created for new events
-let html = ""
-for(let i = 0; i < events.length; i++){
-
-
-    //random cash number
-    let randomArr = (Math.floor(Math.random() * 50000) + 1);
-
-    //call fucntion to reduce length of (events[i]?.giftBox_rules) if any of the text is > 100
-    const rules = viewevent.minLength(events[i]?.giftBox_rules)
-
-    html += `
-        <div class="events">
-            <div class="event-flex">
-            <div class="events-home">
-                <div class="events-images">
-                    <img src="${events[i]?.uploaded_image}" alt="image"/>
-                </div>
-                <div class="events-descriptions">
-                    <div class="event-tickets evt">
-                        <p> ${events[i]?.required_tickets} </p>
-                    </div>
-                    <div class="event-rewards evt">
-                        <p> <span> Gift Reward:- </span> <span> ${events[i]?.giftBox_rewards} </span> </p>
-                    </div>
-                    <div class="event-slots evt">
-                        <p> <span> Slots:- </span> <span> ${events[i]?.giftBox_slots} </span> </p>
-                    </div>
-                    <div class="event-description-note evt">
-                        <p> <span> Description:- </span> ${rules}</p>
-                        <p style="display:none"> <span> Description:- </span> <span> ${events[i]?.giftBox_rules} </span> </p>
-                    </div>
-                </div>
-                <div class="events-cash">
-                    <p> &#128176; &nbsp; ${randomArr} </p>
-                </div>
-                <div class="events-confirmation">
-                    <div class="event-btn">
-                        <button type="button" class="delete-btn" data-id="${events[i]?.required_tickets}"> Delete Event </button>
-                        <button type="button" class="view-btn"> View Event </button>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    `;
-}
-
-//insert every new event into eventHeader
-eventHeader.innerHTML = html
+// const eventHeader = document.querySelector('.main-menu .add-event .view-events .events-header')
 
 eventHeader.addEventListener('click', e => {
     if(e.target.classList.contains('view-btn')){
@@ -225,3 +222,14 @@ event_home.addEventListener('click', e => {
         viewevent.removeEvent(getDataID);
     }
 })
+
+
+if(localStorage.length == 0 || JSON.parse(localStorage.getItem('events')).length == []){
+    const notFound = document.createElement('div')
+    notFound.classList.add('notFound')
+    notFound.innerHTML = `<p> No available events, add events to view them </p>`
+
+    addEvtHeader.appendChild(notFound)
+} else {
+    viewevent.showEvent()
+}

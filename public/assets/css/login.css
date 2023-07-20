@@ -17,7 +17,7 @@ main{width:var(--width100);background-color:#263238}
 .form-input form .input-password{margin-top:10px;}
 .form-input form .input-email label,.form-input form .input-password label{font-weight:var(--wgt400);font-size:15px;color:var(--white-text);}
 .form-input form .input-email input,.form-input form .input-password input{width:var(--width100);height:40px;background-color:transparent;border:1px solid var(--white-text);margin-top:5px;color:var(--white-text);font-family:var(--poppins);}
-.form-input form .input-email input,.form-input form .input-password input{border-width:0px 0px 2px 0px;transition:all .3s;}
+.form-input form .input-email input,.form-input form .input-password input{border-width:0px 0px 2px 0px;transition:all .3s;font-size:16px;}
 .form-input form .login-btn{width:var(--width100);margin-top:30px;}
 .form-input form .login-btn button{background-color:var(--blue-icon-color);width:var(--width100);height:45px;border:var(--blue-icon-color);font-family:var(--poppins);font-weight:600;font-size:17px;color:var(--white-text);border-radius:8px;}
 .form-input .form-head{display:flex;flex-direction:column;align-items:center;margin-bottom:20px;}
