@@ -7,14 +7,12 @@ const events = JSON.parse(eventLocalStorage)
 //
 const addEvtHeader = document.querySelector('.add-event-header')
 
-if(events.length == null || events.length == []){
+if(localStorage.length == 0 || JSON.parse(localStorage.getItem('events')).length == []){
     const notFound = document.createElement('div')
     notFound.classList.add('notFound')
     notFound.innerHTML = `<p> No available events, add events to view them </p>`
 
     addEvtHeader.appendChild(notFound)
-
-    console.log('yess');
 }
 
 //append the viewed event here
