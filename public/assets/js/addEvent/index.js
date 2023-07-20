@@ -1,11 +1,12 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCvlGdtGS9Io1ztriBuL6vZ-pyOqVPT35g",
-    authDomain: "giftbox-c3e78.firebaseapp.com",
-    projectId: "giftbox-c3e78",
-    storageBucket: "giftbox-c3e78.appspot.com",
-    messagingSenderId: "311688930731",
-    appId: "1:311688930731:web:a131066a65c58f43145eee",
-    measurementId: "G-DYJLS2Y50Y"
+    apiKey: "AIzaSyCigoR-1tBD0xdeC259zUPRdY7EJ3A_rzY",
+    authDomain: "supergiftbox1.firebaseapp.com",
+    databaseURL: "https://supergiftbox1-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "supergiftbox1",
+    storageBucket: "supergiftbox1.appspot.com",
+    messagingSenderId: "915455236267",
+    appId: "1:915455236267:web:ff68668a732c64684e3fee",
+    measurementId: "G-CMMCJ79B0X"
 };
 
 firebase.initializeApp(firebaseConfig);
