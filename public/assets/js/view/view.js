@@ -216,10 +216,12 @@ event_home.addEventListener('click', e => {
             setTimeout(() => {
                 parentElement.remove()
                 viewevent.displaySuccess(getDataID)
-            },3000)
-        }
 
-        viewevent.removeEvent(getDataID);
+                viewevent.removeEvent(getDataID);
+            },3000)
+        } else {
+            console.log('not deleted');
+        }
     }
 })
 
