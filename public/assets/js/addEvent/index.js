@@ -11,12 +11,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const win = window.location.href.replace('.html', "")
-
-// const word
-
-console.log(win);
-
 const adminName = document.querySelector('#admin-name')
 const giftBoxSlots = document.querySelector('#giftBox-slots')
 const giftBoxRewards = document.querySelector('#giftBox-rewards')
