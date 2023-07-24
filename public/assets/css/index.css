@@ -1,0 +1,26 @@
+*{padding:0;margin:0;outline:none;box-sizing:border-box;}
+body{scroll-behavior:smooth;position:relative;}
+body{width:100%;font-family:'Poppins', Verdana, Geneva, Tahoma, sans-serif;}
+html{scroll-behavior:smooth;width:100%;}
+html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:700;--wgt400:400;--white-ash:#F1F1F1;--gray:#849DA9;--login-color:#8338EC;--width100:100%;--white-text:#fff;--blue-icon-color:#3A86FF;}
+main{width:var(--width100);background-color:#263238}
+.login-body{display:flex;margin:0px auto;height:650px;}
+.box-logo{background-color:var(--white-text);position:relative;width:40%;display:flex;align-items:center;justify-content:center;}
+.box-logo{border-bottom-left-radius:1000px;}
+.box-logo .box{width:var(--width100);position:relative;height:var(--width100);display:flex;justify-content:center;align-items:center;}
+.box-logo .box img{width:80%;height:80%;position:absolute;transform:translate(-50%,-50%);top:50%;left:25%;}
+.welcome-header h4{color:var(--white-text);font-size:30px;font-family:var(--poppins);text-transform:uppercase;}
+.welcome-header{margin-top:20px;}
+.form-input{width:300px;}
+.form-flex{width:60%;margin-left:200px;display:flex;align-items:center;}
+.form-input form .input-email,.form-input form .input-password{width:var(--width100);}
+.form-input form .input-password{margin-top:10px;}
+.form-input form .input-email label,.form-input form .input-password label{font-weight:var(--wgt400);font-size:15px;color:var(--white-text);}
+.form-input form .input-email input,.form-input form .input-password input{width:var(--width100);height:40px;background-color:transparent;border:1px solid var(--white-text);margin-top:5px;color:var(--white-text);font-family:var(--poppins);}
+.form-input form .input-email input,.form-input form .input-password input{border-width:0px 0px 2px 0px;transition:all .3s;font-size:16px;}
+.form-input form .login-btn{width:var(--width100);margin-top:30px;}
+.form-input form .login-btn button{background-color:var(--blue-icon-color);width:var(--width100);height:45px;border:var(--blue-icon-color);font-family:var(--poppins);font-weight:600;font-size:17px;color:var(--white-text);border-radius:8px;}
+.form-input .form-head{display:flex;flex-direction:column;align-items:center;margin-bottom:20px;}
+.form-head .profile-icon .icon i{font-size:50px;color:var(--blue-icon-color);}
+.form-head .profile-icon .icon{width:80px;height:80px;background-color:var(--white-text);display:flex;justify-content:center;align-items:center;border-radius:50%;}
+.form-input form .input-email input:focus,.form-input form .input-password input:focus{border-bottom-color:var(--blue-icon-color);}
