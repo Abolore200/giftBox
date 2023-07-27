@@ -113,7 +113,7 @@ html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:7
     .main-menu .add-event .view-events .events-header{flex-direction:column;}
     .events-header .events{width:100%;}
     .events-header .events .event-flex{margin:0 auto;}
-    .viewed-event .evt-view{width:90%;padding:25px 15px 15px;}
+    .viewed-event .evt-view{width:90%;padding:25px 15px 15px;height:90dvh;}
     .evt-view .view-rewards{flex-direction:column;overflow-y:scroll;}
     .evt-view .view-rewards .rewards-slots,.evt-view .view-rewards .rewards-slots{width:var(--width100);margin-top:10px;}
     .evt-view .view-rewards .view-slots .box-slot{width:250px;margin:0 auto;height:250px;}

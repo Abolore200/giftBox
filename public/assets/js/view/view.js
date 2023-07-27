@@ -87,6 +87,7 @@ class viewEvent{
             </div>
         
         `;
+        document.querySelector('.body-home').style.position = 'fixed'
 
         viewEvt.style.display = 'block'
         displayEvt.appendChild(html)
@@ -198,7 +199,14 @@ displayEvt.addEventListener('click', e => {
         const parent = e.target.parentElement.parentElement
 
         parent.remove()
-        viewEvt.style.display = 'none'
+
+        if(viewEvt.style.display = 'block'){
+            viewEvt.style.removeProperty('display')
+        }
+
+        if(document.querySelector('.body-home').style.postion = 'fixed'){
+            document.querySelector('.body-home').style.removeProperty('position')
+        }
     }
 })
 
