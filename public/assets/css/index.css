@@ -1,5 +1,5 @@
 *{padding:0;margin:0;outline:none;box-sizing:border-box;}
-body{scroll-behavior:smooth;position:relative;}
+body{scroll-behavior:smooth;position:relative;background-color:var(--black-ash-text);}
 body{width:100%;font-family:'Poppins', Verdana, Geneva, Tahoma, sans-serif;}
 html{scroll-behavior:smooth;width:100%;}
 html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:700;--wgt400:400;--white-ash:#F1F1F1;--gray:#849DA9;--login-color:#8338EC;--width100:100%;--white-text:#fff;--blue-icon-color:#3A86FF;}
@@ -24,3 +24,13 @@ main{width:var(--width100);background-color:#263238}
 .form-head .profile-icon .icon i{font-size:50px;color:var(--blue-icon-color);}
 .form-head .profile-icon .icon{width:80px;height:80px;background-color:var(--white-text);display:flex;justify-content:center;align-items:center;border-radius:50%;}
 .form-input form .input-email input:focus,.form-input form .input-password input:focus{border-bottom-color:var(--blue-icon-color);}
+
+@media screen and (max-width:768px){
+    .login-body{flex-direction:column-reverse;height:100dvh;justify-content:center;align-items:center;margin-bottom:150px;}
+    .box-logo{border-bottom-left-radius:0px;background-color:inherit;}
+    .form-flex,.box-logo{width:100%;margin:0;}
+    .box-logo .box img{position:relative;transform:translate(0,0);top:0;left:0;width:50%;height:50%;}
+    .form-flex{justify-content:center;}
+    .form-head .profile-icon .icon{width:60px;height:60px;}
+    .form-head .profile-icon .icon i{font-size:30px;}
+}

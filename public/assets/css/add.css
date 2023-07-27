@@ -59,3 +59,27 @@ html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:7
 @media screen and (min-width:700px) and (max-width:799px){
     .main-menu .add-event .input-event{width:90%;}
 }
+
+@media screen and (max-width:699px) {
+    .body-home{flex-direction:column;}
+    .body-home aside{position:relative;width:90%;margin:30px auto 20px;background-color:inherit;}
+    .body-home main{width:90%;margin-left:0;margin:0 auto;}
+    .body-home aside .fixed-side-bar{flex-direction:column;justify-content:start;align-items:start;padding-top:0;}
+    .side-menu .box-logo{margin:0;}
+    .side-menu .menu ul{flex-direction:initial;}
+    .side-menu .menu{margin-top:20px;}
+    .side-menu .menu ul li{margin:0 10px;padding:10px;}
+    .side-menu .menu ul li:first-child{margin-left:0;padding-left:0;}
+    .main-menu .add-event{padding-left:0;}
+    .main-menu .add-event .input-event{width:var(--width100);margin:0 auto;padding:20px 15px 30px;}
+    .input-event form .form-flex{flex-direction:column;}
+    .input-event form .form-flex .fill-input{width:var(--width100);margin-right:0;}
+    .input-event form .form-flex .upload-img{width:var(--width100);margin-left:0;margin-bottom:55px;}
+    .upload-img .display-image{margin-left:0;}
+    .upload-img .upload-btn{margin-left:0;}
+    .input-event form .form-flex .fill-input .input input, .input-event form .event-rule textarea{height:40px;}
+    .input-event form .event-rule textarea{height:150px;}
+    .add-event-header{margin-bottom:10px;}
+    .input-event form .submit-btn{margin-top:40px;}
+    .main-menu .success-header{left:0;right:0;}
+}

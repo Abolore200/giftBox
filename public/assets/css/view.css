@@ -96,3 +96,28 @@ html{--poppins:Poppins;--black-ash-text:#263238;--helvetica:Helvetica;--wgt700:7
     .side-menu .menu ul li object{width:30px;height:30px;}
     .main-menu .add-event .input-event{width:90%;}
 }
+
+@media screen and (max-width:699px) {
+    .body-home{flex-direction:column;}
+    .body-home aside{position:relative;width:90%;margin:30px auto 20px;background-color:inherit;z-index:1;}
+    .body-home main{width:90%;margin-left:0;margin:0 auto;}
+    .body-home aside .fixed-side-bar{flex-direction:column;justify-content:start;align-items:start;padding-top:0;}
+    .side-menu .box-logo{margin:0;}
+    .side-menu .menu ul{flex-direction:initial;}
+    .side-menu .menu{margin-top:20px;}
+    .side-menu .menu ul li{margin:0 10px;padding:10px;}
+    .side-menu .menu ul li:first-child{margin-left:0;padding-left:0;}
+    .main-menu .add-event{padding-left:0;}
+    .add-event-header{padding-right:0;text-align:center;}
+    .main-menu .add-event .view-events{width:var(--width100);margin-right:0;}
+    .main-menu .add-event .view-events .events-header{flex-direction:column;}
+    .events-header .events{width:100%;}
+    .events-header .events .event-flex{margin:0 auto;}
+    .viewed-event .evt-view{width:90%;padding:25px 15px 15px;}
+    .evt-view .view-rewards{flex-direction:column;overflow-y:scroll;}
+    .evt-view .view-rewards .rewards-slots,.evt-view .view-rewards .rewards-slots{width:var(--width100);margin-top:10px;}
+    .evt-view .view-rewards .view-slots .box-slot{width:250px;margin:0 auto;height:250px;}
+    .evt-view .view-rewards .rewards .spin p{font-size:25px;}
+    .view-clicked-event{z-index:2;}    
+    .main-menu .success-header{left:0;right:0;}
+}
